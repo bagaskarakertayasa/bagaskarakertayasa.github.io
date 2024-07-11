@@ -1,0 +1,1 @@
+This website serves as my digital portfolio and a space to share my experiences and interests. I'm a continuous learner and I'm currently focusing on expanding my skillset, particularly in PHP and Javascript. If you want more information, feel free to email me at bagaskarakertayasa@gmail.com.
