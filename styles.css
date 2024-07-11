@@ -245,6 +245,10 @@ footer a {
         width: 100%;
     }
 
+    .container-for-social-media {
+        margin: 0 1em;
+    }
+
     #internship {
         margin-top: 1em;
     }
