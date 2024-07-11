@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.my-name {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-nav {
+    padding: 0.5em;
+    gap: 20px;
+    font-size: larger;
+    font-weight: 450;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0 0 1px 0 solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-link {
+    color: black;
+}
+
+.cs-hover:hover {
+    text-decoration: none;
+    color: #fb8b24;
+}
+
+.unique-char {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #fb8b24;
+    text-decoration-color: #fb8b24;
+}
+
+.my-photo {
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+
+    transform-origin: center bottom;
+
+    &:before,
+    &:after {
+        transform-origin: 50% 100%;
+    }
+
+    &:hover {
+        transform: translate(2.5px, 0) rotate(2.5deg);
+
+        &:before {
+            transform: translate(-2.5px, 0) rotate(-2.5deg);
+        }
+
+        &:after {
+            transform: translate(-5px, 0) rotate(-5deg);
+        }
+    }
+}
+
+.cntc {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 0;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.cntc:hover {
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    background-color: transparent;
+}
+
+.cntc span {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.about-me {
+    background-color: #313638;
+    color: white;
+}
+
+.skill-card {
+    background-color: #313638;
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        border: 3px solid #fb8b24;
+        box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+        z-index: 500;
+    }
+}
+
+.skill-logo img {
+    width: 50%;
+    height: auto;
+}
+
+.skill-percentage {
+    font-size: 1.5rem;
+    color: white;
+    margin: 10px 0;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.container-for-social-media {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.column {
+    margin: 0 1rem;
+}
+
+.text-column {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.arrow-column {
+    font-size: 2rem;
+    color: white;
+}
+
+.icons-column {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 1rem;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+.card {
+    border-radius: 0%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform .2s;
+    margin: 1em;
+
+    img {
+        border-radius: 0%;
+    }
+
+    &:hover {
+        z-index: 1000;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 999px 999px rgba(31, 31, 31, 0.5);
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 50%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.button-submit {
+    width: 50%;
+    padding: 10px;
+    background-color: #313638;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-submit:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+footer {
+    background-color: #313638;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+
+    &:hover {
+        color: #fb8b24;
+    }
+}
+
+.modal-bg {
+    background-color: #50af00;
+}
+
+@media only screen and (max-width: 575px) {
+    .cntc {
+        width: 100%;
+    }
+
+    #internship {
+        margin-top: 1em;
+    }
+
+    #personal-web {
+        margin: -2em 0 0 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+    }
+
+    .button-submit {
+        width: 100%;
+    }
+
+    .card {
+        margin: 0 0 1em 0;
+    }
+}
