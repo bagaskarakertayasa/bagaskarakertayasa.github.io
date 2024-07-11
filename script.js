@@ -1,4 +1,6 @@
 function sendMail() {
+    $('#loading-modal').modal('show');
+    
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -35,6 +37,7 @@ function sendMail() {
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
+        $("#loading-modal").modal('hide');
         $("#success-modal").modal('show');
     });
 }
