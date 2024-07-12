@@ -1,6 +1,4 @@
 function sendMail() {
-    $('#loading-modal').modal('show');
-    
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -32,6 +30,8 @@ function sendMail() {
 
     const serviceID = "service_gbk8vr3";
     const templateID = "template_egpojxb";
+
+    $('#loading-modal').modal('show');
 
     emailjs.send(serviceID, templateID, params).then(function (res) {
         document.getElementById("name").value = "";
