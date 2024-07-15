@@ -15,11 +15,6 @@ body {
     font-weight: bold;
 }
 
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
 .navbar-nav {
     padding: 0.5em;
     gap: 20px;
@@ -28,11 +23,13 @@ body {
 }
 
 .navbar.scrolled {
+    z-index: 1000;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 0 0 1px 0 solid rgba(255, 255, 255, 0.3);
+    transition: 0.5s ease-in-out;
 }
 
 .nav-link {
@@ -164,14 +161,33 @@ body {
     align-items: center;
 }
 
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease-in;
+
+    &:hover {
+        background-color: #fb8b24;
+    }
+}
+
 .social-icon {
     width: 32px;
     height: 32px;
-    margin-left: 1rem;
 }
 
-.social-icon:hover {
-    opacity: 0.8;
+.social-icon-footer {
+    width: 32px;
+    height: 32px;
+    margin-left: 1rem;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .card {
@@ -254,6 +270,24 @@ footer a {
 
     #text-social-media {
         margin-right: 0.5em;
+    }
+
+    .text-column {
+        display: none;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow-column {
+        display: none;
+    }
+
+    .icon-box {
+        width: 40px;
+        height: 40px;
     }
 
     #internship {
