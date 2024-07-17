@@ -55,6 +55,7 @@ body {
     width: 70%;
     height: 70%;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    animation: 2s ease-out 0s 1 fade-right;
 
     transform-origin: center bottom;
 
@@ -105,6 +106,10 @@ body {
     color: white;
 }
 
+.animation {
+  animation: 2s ease-out 0s 1 fade-left;
+}
+
 .skill-card {
     background-color: #313638;
     padding: 30px;
@@ -133,6 +138,26 @@ body {
 .skill-name {
     font-size: 1.2rem;
     color: white;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+  animation: fade-right 1s ease-in;
 }
 
 .container-for-social-media {
@@ -257,6 +282,28 @@ footer a {
 
 .modal-bg {
     background-color: #50af00;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 575px) {
