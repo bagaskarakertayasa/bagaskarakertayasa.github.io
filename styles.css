@@ -307,6 +307,14 @@ footer a {
 }
 
 @media only screen and (max-width: 575px) {
+    .header-mobile {
+        font-size: 1.5em;
+    }
+
+    .br-none {
+        display: none;
+    }
+    
     .cntc {
         width: 100%;
     }
